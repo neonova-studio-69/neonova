@@ -28,3 +28,443 @@ body{background:radial-gradient(ellipse at 8% 0%,#35102f 0,transparent 34%),radi
 .hero-choice input{accent-color:#e64cb9}
 .admin-box select:disabled{opacity:.5}
 @media(max-width:650px){.device-switch{gap:7px;margin:16px auto 6px}.device-btn{font-size:10px;padding:9px 12px}}
+/* =========================================
+   NEONOVA ADMIN & GALLERY EXTENSIONS
+   Original design and colors are preserved.
+========================================= */
+
+:root {
+  --gallery-columns: 6;
+}
+
+.gallery {
+  grid-template-columns: repeat(var(--gallery-columns, 6), minmax(0, 1fr));
+}
+
+.gallery-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 0 0 15px;
+  flex-wrap: wrap;
+}
+
+.gallery-controls select,
+.admin-box select,
+.admin-box textarea,
+.admin-box input {
+  font: inherit;
+}
+
+.gallery-controls select {
+  background: #0a1425;
+  color: #e9efff;
+  border: 1px solid #47305f;
+  border-radius: 20px;
+  padding: 8px 13px;
+  font-size: 11px;
+  outline: none;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  padding: 25px 0 10px;
+  color: #c7cce3;
+  font-size: 12px;
+}
+
+.pagination button {
+  background: linear-gradient(100deg, #54215d, #29245e);
+  border: 1px solid #70418b;
+  color: white;
+  padding: 8px 17px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  opacity: .35;
+  cursor: not-allowed;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 3;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #ff72c8;
+  background: #100b25d9;
+  color: white;
+  font-size: 21px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.favorite-btn.is-favorite {
+  color: #ff4fc8;
+  background: #391238eF;
+  box-shadow: 0 0 15px #ff4fc855;
+}
+
+.audio-card {
+  position: relative;
+}
+
+.download-audio {
+  color: #eeb4ff;
+  font-size: 11px;
+  margin-top: 10px;
+}
+
+.poem-card {
+  min-height: 250px;
+}
+
+.poem-content {
+  white-space: pre-wrap;
+  line-height: 2.2;
+  color: #d6cce9;
+  font-size: 13px;
+}
+
+.poem-card > button:not(.favorite-btn) {
+  border: 1px solid #a45cff;
+  background: linear-gradient(100deg, #54215d, #29245e);
+  color: white;
+  border-radius: 20px;
+  padding: 7px 15px;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.public-info {
+  max-width: 1100px;
+  margin: 35px auto;
+  padding: 25px;
+  border: 1px solid #47305f;
+  border-radius: 15px;
+  background: #0b1024;
+  color: #e9efff;
+}
+
+.public-info h2 {
+  font-size: 20px;
+}
+
+.public-info p {
+  font-size: 13px;
+  line-height: 2;
+  color: #b9c5df;
+}
+
+#contact {
+  flex-wrap: wrap;
+}
+
+#contactText {
+  width: 100%;
+  text-align: center;
+  font-size: 11px;
+  color: #9eacc5;
+}
+
+.admin-dashboard {
+  width: min(850px, 100%);
+}
+
+.admin-heading {
+  margin-bottom: 20px;
+}
+
+.admin-heading h2 {
+  margin: 6px 0;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #47305f;
+  padding-bottom: 14px;
+  margin-bottom: 20px;
+}
+
+.admin-tabs button {
+  border: 1px solid #47305f;
+  background: #10152d;
+  color: #d9d5ef;
+  padding: 9px 13px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 11px;
+  transition: .2s;
+}
+
+.admin-tabs button.active,
+.admin-tabs button:hover {
+  background: linear-gradient(100deg, #a23eff, #ed3e9f);
+  color: white;
+  border-color: #ff80d6;
+  box-shadow: 0 0 12px #d94cff44;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.stats-grid article {
+  padding: 17px 12px;
+  border: 1px solid #47305f;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #19102c, #0b1024);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stats-grid small {
+  color: #aab7d0;
+  font-size: 11px;
+}
+
+.stats-grid b {
+  font: 800 24px Inter, sans-serif;
+  color: #f4b2ff;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.admin-secondary {
+  background: #17152f;
+  border: 1px solid #70418b;
+  color: #eee4ff;
+  padding: 10px 15px;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.admin-form {
+  display: grid;
+  gap: 10px;
+  margin: 15px 0 25px;
+}
+
+.admin-form label {
+  font-size: 12px;
+  color: #c6b9e9;
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea,
+.admin-box > input,
+.admin-box > select,
+#adminSearch {
+  width: 100%;
+  min-width: 0;
+  background: #071020;
+  border: 1px solid #47305f;
+  border-radius: 9px;
+  color: white;
+  padding: 11px;
+  outline: none;
+}
+
+.admin-form input:focus,
+.admin-form select:focus,
+.admin-form textarea:focus,
+#adminSearch:focus {
+  border-color: #ed55bd;
+  box-shadow: 0 0 12px #ed55bd22;
+}
+
+.admin-form textarea {
+  resize: vertical;
+  line-height: 1.9;
+}
+
+.admin-form input[type="color"] {
+  height: 45px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.admin-form input[type="file"] {
+  font-size: 11px;
+}
+
+.admin-form input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  accent-color: #ed55bd;
+}
+
+.check-line {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #d7ccec !important;
+  margin: 5px 0;
+}
+
+.admin-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 8px;
+  border-bottom: 1px solid #29334e;
+}
+
+.admin-item > div:first-child {
+  min-width: 0;
+}
+
+.admin-item b {
+  display: block;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+
+.admin-item small {
+  display: block;
+  color: #aab7d0;
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+.admin-item-actions {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.admin-item-actions button {
+  border: 1px solid #70418b;
+  background: #17152f;
+  color: #eee4ff;
+  border-radius: 8px;
+  padding: 6px 9px;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.admin-item-actions button:hover {
+  background: #54215d;
+}
+
+.admin-box hr {
+  border: 0;
+  border-top: 1px solid #47305f;
+  margin: 22px 0;
+}
+
+.admin-box h3 {
+  font-size: 15px;
+  margin: 18px 0 12px;
+  color: #e9d6ff;
+}
+
+.admin-box .primary:disabled {
+  opacity: .55;
+  cursor: wait;
+}
+
+.admin-box .text-btn {
+  display: block;
+  margin: 22px auto 0;
+}
+
+.page-content {
+  white-space: pre-wrap;
+  line-height: 2.2;
+  color: #d8d1e8;
+  font-size: 13px;
+}
+
+.light .public-info {
+  background: #e4e8fa;
+  color: #17213a;
+  border-color: #bdc7df;
+}
+
+.light .public-info p {
+  color: #45516c;
+}
+
+.light .gallery-controls select {
+  background: #e4e8fa;
+  color: #17213a;
+}
+
+@media(max-width: 1050px) {
+  .gallery {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  :root {
+    --gallery-columns: 3;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media(max-width: 650px) {
+  .gallery-controls {
+    justify-content: center;
+  }
+
+  .gallery-controls select {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-tabs {
+    gap: 5px;
+  }
+
+  .admin-tabs button {
+    padding: 8px 10px;
+    font-size: 10px;
+  }
+
+  .admin-item {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-item-actions {
+    justify-content: flex-start;
+  }
+
+  .public-info {
+    margin: 20px 12px;
+    padding: 17px;
+  }
+
+  .pagination {
+    gap: 8px;
+  }
+}
